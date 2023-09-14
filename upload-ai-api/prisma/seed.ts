@@ -32,8 +32,7 @@ Transcrição:
   await prisma.prompt.create({
     data: {
       title: 'Descrição YouTube',
-      template:
-        `Seu papel é gerar uma descrição sucinta para um vídeo do YouTube.
+      template: `Seu papel é gerar uma descrição sucinta para um vídeo do YouTube.
   
 Abaixo você receberá uma transcrição desse vídeo, use essa transcrição para gerar a descrição.
 
@@ -62,7 +61,7 @@ main()
   .then(async () => {
     await prisma.$disconnect()
   })
-  .catch(async e => {
+  .catch(async (e) => {
     console.error(e)
     await prisma.$disconnect()
     process.exit(1)
